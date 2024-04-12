@@ -7,7 +7,3 @@
 body{
   font-family: "Manrope", sans-serif;
 }
-
-.slick-slider .slick-track .slick-slide:focus {
-  outline: none !important;
-}

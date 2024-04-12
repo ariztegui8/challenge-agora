@@ -32,11 +32,15 @@ const Navbar = () => {
         setWheelchair(!wheelchair)
     }
 
-    console.log('wheelchair', wheelchair);
+    const handleClickMenuMobile = () => {
+        if (clickMenu) {
+            setClickMenu(false);
+        }
+      };
 
     return (
         <>
-            <div className='hidden fixed top-0 z-10 w-full bg-white justify-center items-center gap-20 py-2 shadow-md lg:flex'>
+            <div className='hidden fixed top-0 z-10 w-full bg-white justify-center items-center gap-20 py-2.5 shadow-md lg:flex'>
                 <div>
                     <Link href="/">
                         <img width={120} src={logo.src} alt="logo" />
@@ -47,7 +51,9 @@ const Navbar = () => {
                     <p className='text-[#333333] text-sm cursor-pointer hover:text-[#19417f]'>Programas</p>
                     <p className='text-[#333333] text-sm cursor-pointer hover:text-[#19417f]'>Impacto</p>
                     <p className='text-[#333333] text-sm cursor-pointer hover:text-[#19417f]'>Súmate</p>
-                    <p className='text-[#333333] text-sm cursor-pointer hover:text-[#19417f]'>Blog</p>
+                    <Link href="/blog">
+                        <p className='text-[#333333] text-sm cursor-pointer hover:text-[#19417f]'>Blog</p>
+                    </Link>
                     <p className='text-[#333333] text-sm cursor-pointer hover:text-[#19417f]'>Recursos</p>
                     <p className='text-[#333333] text-sm cursor-pointer hover:text-[#19417f]'>Sedes</p>
                     <p className='text-[#19417f] text-sm font-semibold cursor-pointer hover:text-[#AA2251]'>Change Lab</p>
@@ -106,7 +112,9 @@ const Navbar = () => {
                 <p className='text-[#494c4f] py-2 cursor-pointer hover:text-white hover:bg-[#55595c] duration-200'>Programas</p>
                 <p className='text-[#494c4f] py-2 cursor-pointer hover:text-white hover:bg-[#55595c] duration-200'>Impacto</p>
                 <p className='text-[#494c4f] py-2 cursor-pointer hover:text-white hover:bg-[#55595c] duration-200'>Súmate</p>
+                <Link onClick={handleClickMenuMobile} href="/blog">
                 <p className='text-[#494c4f] py-2 cursor-pointer hover:text-white hover:bg-[#55595c] duration-200'>Blog</p>
+                </Link>
                 <p className='text-[#494c4f] py-2 cursor-pointer hover:text-white hover:bg-[#55595c] duration-200'>Recursos</p>
                 <p className='text-[#494c4f] py-2 cursor-pointer hover:text-white hover:bg-[#55595c] duration-200'>Sedes</p>
                 <p className='text-[#494c4f] py-2 cursor-pointer hover:text-white hover:bg-[#55595c] duration-200'>Change Lab</p>

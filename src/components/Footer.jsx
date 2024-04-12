@@ -35,7 +35,9 @@ const Footer = () => {
                     <p className='text-[#333333] text-sm cursor-pointer'>Programas</p>
                     <p className='text-[#333333] text-sm cursor-pointer'>Impacto</p>
                     <p className='text-[#333333] text-sm cursor-pointer'>Súmate</p>
-                    <p className='text-[#333333] text-sm cursor-pointer'>Blog</p>
+                    <Link href="/blog">
+                        <p className='text-[#333333] text-sm cursor-pointer'>Blog</p>
+                    </Link>
                     <p className='text-[#333333] text-sm cursor-pointer'>Recursos</p>
                     <p className='text-[#333333] text-sm cursor-pointer'>Sedes</p>
                     <p className='text-[#333333] text-sm cursor-pointer'>Change Lab</p>

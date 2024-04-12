@@ -1,22 +1,22 @@
 'use client'
-import arguidius from '@/assets/financiadores/Arguidius.jpg'
-import athena from '@/assets/financiadores/Athena-Fundation.jpg'
-import bid from '@/assets/financiadores/BID-Lab-Color_SPA.png'
-import cenpromype from '@/assets/financiadores/cenpromype.jpg'
-import citibanamex from '@/assets/financiadores/citibanamex.jpg'
-import embajada from '@/assets/financiadores/Embajada-EEUU-en-mexico.jpg'
-import eye from '@/assets/financiadores/EYElliance.jpg'
-import hip from '@/assets/financiadores/HIP.png'
-import holland from '@/assets/financiadores/Holland-Embassy.jpg'
-import inbia from '@/assets/financiadores/INBIA.jpg'
-import irex from '@/assets/financiadores/IREX.jpg'
-import meda from '@/assets/financiadores/MEDA.jpg'
-import venture from '@/assets/financiadores/New-Venture-Fund.png'
-import palladium from '@/assets/financiadores/Palladium.jpg'
-import foundation from '@/assets/financiadores/Target-Foundation.jpeg'
-import tawingo from '@/assets/financiadores/Tawingo-fund.jpg'
-import wef from '@/assets/financiadores/World-Economic-Forum.jpg'
-import yunus from '@/assets/financiadores/Yunus.jpg'
+import Group14 from '@/assets/financiadores/Group14.png'
+import Group15 from '@/assets/financiadores/Group15.png'
+import Group16 from '@/assets/financiadores/Group16.png'
+import Group17 from '@/assets/financiadores/Group17.png'
+import Group18 from '@/assets/financiadores/Group18.png'
+import Group19 from '@/assets/financiadores/Group19.png'
+import Group20 from '@/assets/financiadores/Group20.png'
+import Group21 from '@/assets/financiadores/Group21.png'
+import Group22 from '@/assets/financiadores/Group22.png'
+import Group23 from '@/assets/financiadores/Group23.png'
+import Group24 from '@/assets/financiadores/Group24.png'
+import Group25 from '@/assets/financiadores/Group25.png'
+import Group26 from '@/assets/financiadores/Group26.png'
+import Group27 from '@/assets/financiadores/Group27.png'
+import Group28 from '@/assets/financiadores/Group28.png'
+import Group29 from '@/assets/financiadores/Group29.png'
+import Group30 from '@/assets/financiadores/Group30.png'
+import Group31 from '@/assets/financiadores/Group31.png'
 import Slider from 'react-slick';
 
 const Financiadores = () => {
@@ -29,6 +29,7 @@ const Financiadores = () => {
         autoplay: true,
         autoplaySpeed: 3000,
         cssEase: "linear",
+        pauseOnHover: false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -60,75 +61,75 @@ const Financiadores = () => {
     const financiadoes = [
         {
             id: '1',
-            url: arguidius,
+            url: Group14,
         },
         {
             id: '2',
-            url: athena,
+            url: Group15,
         },
         {
             id: '3',
-            url: bid,
+            url: Group16,
         },
         {
             id: '4',
-            url: cenpromype,
+            url: Group17,
         },
         {
             id: '5',
-            url: citibanamex,
+            url: Group18,
         },
         {
             id: '6',
-            url: embajada,
+            url: Group19,
         },
         {
             id: '7',
-            url: eye,
+            url: Group20,
         },
         {
             id: '8',
-            url: hip,
+            url: Group21,
         },
         {
             id: '9',
-            url: holland,
+            url: Group22,
         },
         {
             id: '10',
-            url: inbia,
+            url: Group23,
         },
         {
             id: '11',
-            url: irex,
+            url: Group24,
         },
         {
             id: '12',
-            url: meda,
+            url: Group25,
         },
         {
             id: '13',
-            url: venture,
+            url: Group26,
         },
         {
             id: '14',
-            url: palladium,
+            url: Group27,
         },
         {
             id: '15',
-            url: foundation,
+            url: Group28,
         },
         {
             id: '16',
-            url: tawingo,
+            url: Group29,
         },
         {
             id: '17',
-            url: wef,
+            url: Group30,
         },
         {
             id: '18',
-            url: yunus,
+            url: Group31,
         },
     ];
 
@@ -144,7 +145,7 @@ const Financiadores = () => {
                 <Slider {...settings}>
                     {financiadoes.map(data => (
                         <div key={data.id}>
-                            <img width="100%" className='object-contain h-[130px] !important' src={data.url.src} alt="" />
+                            <img width="100%" className='object-contain h-[100px] !important' src={data.url.src} alt="" />
                         </div>
                     ))}
                 </Slider>

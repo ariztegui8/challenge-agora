@@ -63,7 +63,7 @@ const Newsletter = () => {
             </div>
 
             <form onSubmit={handleSubmitForm}>
-                <div className='flex flex-col gap-4 mb-6 md:flex-row md-gap-10'>
+                <div className='flex flex-col gap-4 mb-6 md:flex-row md:gap-10'>
                     <div className='w-full'>
                         <div className='flex flex-col gap-4'>
                             <input

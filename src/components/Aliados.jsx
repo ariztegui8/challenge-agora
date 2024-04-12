@@ -1,18 +1,18 @@
 'use client'
 import { BsArrowUpRightCircle } from "react-icons/bs";
-import cenpromype from '@/assets/aliados/cenpromype.jpg'
-import center from '@/assets/aliados/Center-for-inclusive-growth.jpg'
-import citibanamex from '@/assets/aliados/citibanamex.png'
-import drip from '@/assets/aliados/DRIP-capital.jpg'
-import im from '@/assets/aliados/im.png'
-import kueski from '@/assets/aliados/kUESKI.jpg'
-import lendera from '@/assets/aliados/lendera.jpg'
-import meli from '@/assets/aliados/mercado-libre.jpg'
-import palladium from '@/assets/aliados/palladium.png'
-import pretmex from '@/assets/aliados/pretmex.jpg'
-import pricesmart from '@/assets/aliados/pricesmart.jpg'
-import walmart from '@/assets/aliados/Walmartjpg.jpg'
-import yunus from '@/assets/aliados/yunus.png'
+import Group1 from '@/assets/aliados/Group1.png'
+import Group2 from '@/assets/aliados/Group2.png'
+import Group3 from '@/assets/aliados/Group3.png'
+import Group4 from '@/assets/aliados/Group4.png'
+import Group5 from '@/assets/aliados/Group5.png'
+import Group6 from '@/assets/aliados/Group6.png'
+import Group7 from '@/assets/aliados/Group7.png'
+import Group8 from '@/assets/aliados/Group8.png'
+import Group9 from '@/assets/aliados/Group9.png'
+import Group10 from '@/assets/aliados/Group10.png'
+import Group11 from '@/assets/aliados/Group11.png'
+import Group12 from '@/assets/aliados/Group12.png'
+import Group13 from '@/assets/aliados/Group13.png'
 import Slider from 'react-slick';
 
 const Aliados = () => {
@@ -25,6 +25,7 @@ const Aliados = () => {
         autoplay: true,
         autoplaySpeed: 3000,
         cssEase: "linear",
+        pauseOnHover: false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -55,55 +56,55 @@ const Aliados = () => {
     const aliados = [
         {
             id: '1',
-            url: cenpromype,
+            url: Group1,
         },
         {
             id: '2',
-            url: center,
+            url: Group2,
         },
         {
             id: '3',
-            url: citibanamex,
+            url: Group3,
         },
         {
             id: '4',
-            url: drip,
+            url: Group4,
         },
         {
             id: '5',
-            url: im,
+            url: Group5,
         },
         {
             id: '6',
-            url: kueski,
+            url: Group6,
         },
         {
             id: '7',
-            url: lendera,
+            url: Group7,
         },
         {
             id: '8',
-            url: meli,
+            url: Group8,
         },
         {
             id: '9',
-            url: palladium,
+            url: Group9,
         },
         {
             id: '10',
-            url: pretmex,
+            url: Group10,
         },
         {
             id: '11',
-            url: pricesmart,
+            url: Group11,
         },
         {
             id: '12',
-            url: walmart,
+            url: Group12,
         },
         {
             id: '13',
-            url: yunus,
+            url: Group13,
         },
     ];
 
@@ -130,7 +131,7 @@ const Aliados = () => {
                 <Slider {...settings}>
                     {aliados.map(data => (
                         <div key={data.id}>
-                            <img width="100%" className='object-contain h-[130px] !important' src={data.url.src} alt="" />
+                            <img width="100%" className='object-contain h-[100px] !important' src={data.url.src} alt="" />
                         </div>
                     ))}
                 </Slider>

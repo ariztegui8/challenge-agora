@@ -23,34 +23,34 @@ const QueHacemos = () => {
                 </div>
             </div>
 
-            <div className='grid grid-cols-1 gap-10 lg:gap-4 lg:grid-cols-3'>
-                <div className='flex flex-col gap-4'>
-                    <div className='cursor-pointer overflow-hidden rounded-2xl flex '>
+            <div className=' grid grid-cols-1 gap-10 lg:gap-4 lg:grid-cols-3'>
+                <div className='group flex flex-col gap-4'>
+                    <div className=' cursor-pointer overflow-hidden rounded-2xl flex '>
                         <img className='w-full h-52 sm:h-64 object-cover rounded-2xl hover:scale-110 duration-300' src={emprendedora.src} alt="" />
                     </div>
-                    <div className='p-6 bg-red-400 rounded-xl flex flex-col gap-4 flex-1'>
-                        <p className='text-[#333333] font-bold text-lg'>Emprendimientos y pequeñas empresas en crecimiento</p>
-                        <p className='text-[#333333] text-sm'>Ofrecemos formación empresarial, vinculación a mercados y acceso a financiamiento a emprendedores y pequeñas empresas en crecimiento en su camino hacia la sostenibilidad económica, social y ambiental.</p>
+                    <div className='group p-6 rounded-xl flex flex-col gap-4 flex-1 group-hover:bg-[linear-gradient(359.74deg,_#C1285D_10.64%,_#9C2C4C_104.83%)]'>
+                        <p className='text-[#333333] font-bold text-lg group-hover:text-white'>Emprendimientos y pequeñas empresas en crecimiento</p>
+                        <p className='text-[#333333] text-sm group-hover:text-white'>Ofrecemos formación empresarial, vinculación a mercados y acceso a financiamiento a emprendedores y pequeñas empresas en crecimiento en su camino hacia la sostenibilidad económica, social y ambiental.</p>
                     </div>
                 </div>
 
-                <div className='flex flex-col gap-4'>
+                <div className='group flex flex-col gap-4'>
                     <div className='cursor-pointer overflow-hidden rounded-2xl flex'>
                         <img className='w-full h-52 sm:h-64 object-cover rounded-2xl hover:scale-110 duration-300' src={planeacion.src} alt="" />
                     </div>
-                    <div className='p-6 bg-red-400 rounded-xl flex flex-col gap-4 flex-1'>
-                        <p className='text-[#333333] font-bold text-lg'>Ecosistema</p>
-                        <p className='text-[#333333] text-sm'>Contribuimos al fortalecimiento del ecosistema de emprendedores y pequeñas empresas en crecimiento a través de eventos, tales como el programa Formando Catalizadores, y el co-liderazgo de la Red de Impacto, integrada por más de 100 organizaciones de la región.</p>
+                    <div className='group p-6 rounded-xl flex flex-col gap-4 flex-1 group-hover:bg-[linear-gradient(99.27deg,_#E2663A_-2.26%,_#EB9B1A_98.84%)]'>
+                        <p className='text-[#333333] font-bold text-lg group-hover:text-white'>Ecosistema</p>
+                        <p className='text-[#333333] text-sm group-hover:text-white'>Contribuimos al fortalecimiento del ecosistema de emprendedores y pequeñas empresas en crecimiento a través de eventos, tales como el programa Formando Catalizadores, y el co-liderazgo de la Red de Impacto, integrada por más de 100 organizaciones de la región.</p>
                     </div>
                 </div>
 
-                <div className='flex flex-col gap-4'>
+                <div className='group flex flex-col gap-4'>
                     <div className='cursor-pointer overflow-hidden rounded-2xl flex'>
                         <img className='w-full h-52 sm:h-64 object-cover rounded-2xl hover:scale-110 duration-300' src={empresario.src} alt="" />
                     </div>
-                    <div className='p-6 bg-red-400 rounded-xl flex flex-col gap-4 flex-1'>
-                        <p className='text-[#333333] font-bold text-lg'>Proyectos inclusivos</p>
-                        <p className='text-[#333333] text-sm'>Ejecutamos proyectos específicos junto a aliados con los que compartimos nuestra visión por la inclusión financiera, la equidad de género, la diversificación, resiliencia y sostenibilidad en las cadenas de valor, y la adaptación al cambio climático en la región.</p>
+                    <div className='group p-6 rounded-xl flex flex-col gap-4 flex-1 group-hover:bg-[linear-gradient(99deg,_#0D9A51_0%,_#02804C_100%)]'>
+                        <p className='text-[#333333] font-bold text-lg group-hover:text-white'>Proyectos inclusivos</p>
+                        <p className='text-[#333333] text-sm group-hover:text-white'>Ejecutamos proyectos específicos junto a aliados con los que compartimos nuestra visión por la inclusión financiera, la equidad de género, la diversificación, resiliencia y sostenibilidad en las cadenas de valor, y la adaptación al cambio climático en la región.</p>
                     </div>
                 </div>
             </div>

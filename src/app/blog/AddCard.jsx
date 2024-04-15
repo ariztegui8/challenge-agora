@@ -7,10 +7,12 @@ const AddCard = ({ isOpen, onClose, setArticles }) => {
     const [form, setForm] = useState({
         title: '',
         description: '',
-        category: ''
+        category: '',
+        author: '',
+        video: ''
     })
 
-    const { title, description, category } = form
+    const { title, description, category, author, video } = form
 
     const [file, setFile] = useState(null)
 
@@ -31,7 +33,9 @@ const AddCard = ({ isOpen, onClose, setArticles }) => {
         const formData = new FormData()
         formData.append('title', form.title)
         formData.append('description', form.description)
-        formData.append('category', form.category);
+        formData.append('category', form.category)
+        formData.append('author', form.author)
+        formData.append('video', form.video)
         if (file) {
             formData.append('image', file)
         }
@@ -49,6 +53,8 @@ const AddCard = ({ isOpen, onClose, setArticles }) => {
                     title: form.title,
                     description: form.description,
                     category: form.category,
+                    author: form.author,
+                    video: form.video,
                     image: response.data.imagePath || 'uploads/default.webp'
                 }
                 setArticles(prev => [newArticle, ...prev])
@@ -56,7 +62,9 @@ const AddCard = ({ isOpen, onClose, setArticles }) => {
             setForm({
                 title: '',
                 description: '',
-                category: ''
+                category: '',
+                author: '',
+                video: '',
             })
             setFile(null)
             onClose()
@@ -97,6 +105,14 @@ const AddCard = ({ isOpen, onClose, setArticles }) => {
                                 value={title}
                                 onChange={handleChangeForm}
                             />
+                            <input
+                                type="text"
+                                placeholder="Autor"
+                                className="input text-[#333333] bg-[#fff] outline-none w-full border-b border-[#333333] py-2 placeholder:text-[#333333] text-sm"
+                                name='author'
+                                value={author}
+                                onChange={handleChangeForm}
+                            />
                             <textarea
                                 type="text"
                                 placeholder="Descripción"
@@ -120,6 +136,14 @@ const AddCard = ({ isOpen, onClose, setArticles }) => {
                                 <option value='SALA DE PRENSA'>Sala de prensa</option>
                                 <option value='PROGAMA'>Programa</option>
                             </select>
+                            <input
+                                type="text"
+                                placeholder="Link del video"
+                                className="input text-[#333333] bg-[#fff] outline-none w-full border-b border-[#333333] py-2 placeholder:text-[#333333] text-sm"
+                                name='video'
+                                value={video}
+                                onChange={handleChangeForm}
+                            />
                         </div>
 
                         <div className='flex justify-end'>

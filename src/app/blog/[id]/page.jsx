@@ -1,20 +1,28 @@
 'use client'
-import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
+import axios from "axios";
+import { useParams } from 'next/navigation';
+import barra from '@/assets/barra-blog.svg'
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
+import { FaSpotify } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import Link from 'next/link'
+import { changeEditDescription } from '@/helpers';
 
 const PageId = () => {
 
     const [article, setArticle] = useState(null);
-    const router = useRouter();
+    const { id } = useParams();
 
     useEffect(() => {
-        console.log('Router is ready:', router.isReady);
-        if (router.isReady) {
-            const { id } = router.query
+        if (id) {
             console.log('Article ID:', id);
             fetchArticle(id)
         }
-    }, [router.isReady, router.query])
+    }, [id])
 
     const fetchArticle = async (id) => {
         try {
@@ -26,21 +34,107 @@ const PageId = () => {
         }
     };
 
+    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL
+    const imageUrl = article && article.image ? `${baseUrl}/${article.image.replace(/\\/g, '/')}` : `${baseUrl}/uploads/default.webp`;
+    const editDescription = article ? changeEditDescription(article.description, 150) : '';
+
 
     return (
-        <div className='mt-12 lg:mt-28'>
-            {!article ?
+        <div className='mt-12 lg:mt-[70px]'>
+            <div className='px-4 lg:px-24 py-16 bg-[#333333] rounded-xl mb-16'>
+                <p className='text-white text-xs font-semibold mb-3'>{article && article.category}</p>
+                <div className='flex flex-col gap-8 md:flex-row'>
+                    <div className='w-full md:w-1/2'>
+                        <p className='text-white text-[25px] font-bold break-words md:text-[35px]'>{article && article.title}</p>
+                    </div>
+
+                    <div className='w-full md:w-1/2 flex flex-col items-start gap-6 mt-4'>
+                        <img src={barra.src} alt="" />
+                        <p className='text-white text-sm break-words'>{editDescription}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className=' m-auto px-4 lg:px-52 '>
+                <div className='mb-7'>
+                    <img className='w-full h-72 sm:h-96 lg:h-[600px] object-cover' src={imageUrl} alt="" />
+                </div>
+
+                <div className='mb-7'>
+                    <p className='text-[32px] text-[#19417f] font-semibold'>{article && article.title}</p>
+                </div>
+
+                <div className='flex gap-5 mb-4'>
+                    <span className='border-[4px] border-[#e6e9ec]'></span>
+                    <p className='text-sm text-[#333333]'>Escrito por: {article && article.author}</p>
+                </div>
+
+                <div className='mb-10'>
+                    <p className='text-sm text-[#333333] leading-relaxed'>{article && article.description}</p>
+                </div>
+
+                {article && article.video ?
+                        <div className='w-full mb-16 flex items-center justify-center'>
+                            <iframe className='w-3/4 h-80' src={`https://www.youtube.com/embed/${article && article.video}`} title="TREMENDO ESPECTÁCULO dan Juan Ariztegui vs. &quot;La Villerita&quot; de Toloza - El Caldén 2023 | Cristian" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+                        </div>
+
+                        : 
+                        null
+                    }
+
+                <div className='flex justify-center gap-5 mb-10 md:mb-24'>
+                    <Link href="https://www.facebook.com/AgoraPartnerships" target='_blank'>
+                        <FaFacebook
+                            size={16}
+                        />
+                    </Link>
+
+                    <Link href="https://www.instagram.com/agora_2030/" target='_blank'>
+                        <FaInstagram
+                            size={16}
+                        />
+                    </Link>
+
+                    <Link href="https://medium.com/@AgoraPartnerships" target='_blank'>
+                        <FaTwitter
+                            size={16}
+                        />
+                    </Link>
+
+                    <Link href="https://www.linkedin.com/company/agora-partnerships/" target='_blank'>
+                        <FaLinkedin
+                            size={16}
+                        />
+                    </Link>
+
+                    <Link href=" https://open.spotify.com/show/2ejv4LsiSWT9GsFnnHsHZc?si=8f23d80160c54fb6&nd=1" target='_blank'>
+                        <FaSpotify
+                            size={16}
+                        />
+                    </Link>
+
+                    <Link href="https://www.youtube.com/channel/UCHourQ5NcP4S-jsA2fvBmEA" target='_blank'>
+                        <MdEmail
+                            size={16}
+                        />
+                    </Link>
+                </div>
+            </div>
+
+
+        </div>
+
+    )
+}
+
+{/* {!article ?
                 <p>Loading...</p>
                 :
                 <div>
                     <h1>{article ? article.title : 'Loading...'}</h1>
-                    {article && <img src={article.image} alt='' />}
+                    {article && <img src={imageUrl} alt='' />}
                     <p>{article ? article.description : 'Loading description...'}</p>
                 </div>
-            }
-
-        </div>
-    )
-}
+            } */}
 
 export default PageId

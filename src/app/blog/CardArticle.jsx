@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import axios from "axios";
 import { LuMoreVertical } from "react-icons/lu";
 import { MdEdit } from "react-icons/md";
 import { RiDeleteBin6Line } from "react-icons/ri";
@@ -70,7 +69,7 @@ const CardArticle = ({ article, openModalEdit, openModalDelete }) => {
             </div>
             <div className='rounded-xl flex justify-between flex-col gap-4 flex-1'>
                 <div className='flex flex-col gap-4'>
-                    <p className='text-[#333333] font-bold text-lg break-words'>{article.title}</p>
+                    <p onClick={handlePageId} className='text-[#333333] font-bold text-lg break-words cursor-pointer'>{article.title}</p>
                     <p className='text-[#333333] text-sm mb-3 break-words'>{editDescription}</p>
                 </div>
                 <div className='flex items-center gap-4'>

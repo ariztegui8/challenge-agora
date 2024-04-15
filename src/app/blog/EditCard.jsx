@@ -8,6 +8,8 @@ const EditCard = ({ isOpen, onClose, setArticles, articleToEdit }) => {
         title: '',
         description: '',
         category: '',
+        author: '',
+        video: '',
         image: null,
     });
 
@@ -17,6 +19,8 @@ const EditCard = ({ isOpen, onClose, setArticles, articleToEdit }) => {
                 title: articleToEdit.title,
                 description: articleToEdit.description,
                 category: articleToEdit.category,
+                author: articleToEdit.author,
+                video: articleToEdit.video,
                 image: null,
             })
         }
@@ -36,6 +40,8 @@ const EditCard = ({ isOpen, onClose, setArticles, articleToEdit }) => {
         formData.append('title', form.title)
         formData.append('description', form.description)
         formData.append('category', form.category)
+        formData.append('author', form.author)
+        formData.append('video', form.video)
         if (form.image) {
             formData.append('image', form.image)
         }
@@ -90,6 +96,14 @@ const EditCard = ({ isOpen, onClose, setArticles, articleToEdit }) => {
                                 value={form.title}
                                 onChange={handleChangeForm}
                             />
+                            <input
+                                type="text"
+                                placeholder="Autor"
+                                className="input text-[#333333] bg-[#fff] outline-none w-full border-b border-[#333333] py-2 placeholder:text-[#333333] text-sm"
+                                name='author'
+                                value={form.author}
+                                onChange={handleChangeForm}
+                            />
                              <textarea
                                 type="text"
                                 placeholder="Descripción"
@@ -113,6 +127,14 @@ const EditCard = ({ isOpen, onClose, setArticles, articleToEdit }) => {
                                 <option value='SALA DE PRENSA'>Sala de prensa</option>
                                 <option value='PROGAMA'>Programa</option>
                             </select>
+                            <input
+                                type="text"
+                                placeholder="Link del video"
+                                className="input text-[#333333] bg-[#fff] outline-none w-full border-b border-[#333333] py-2 placeholder:text-[#333333] text-sm"
+                                name='video'
+                                value={form.video}
+                                onChange={handleChangeForm}
+                            />
                         </div>
                         <div className='flex justify-end'>
                             <button type='submit' className={`bg-[#c1285d] text-white text-[15px] py-1.5 px-6 rounded-full hover:bg-[#aa2251] w-max `}>Actualizar</button>

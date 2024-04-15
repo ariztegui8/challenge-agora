@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
 
 
 const Newsletter = () => {
@@ -25,31 +26,29 @@ const Newsletter = () => {
         })
     }
 
-    const handleSubmitForm = e => {
+    const handleSubmitForm = async (e) => {
         e.preventDefault()
-        console.log(form);
-
-        if (recaptcha) {
-            console.log('recaptcha', recaptcha)
-        } else {
-            console.log('No recaptcha')
-        }
-
-        if (nombre.trim() == '' || apellido.trim() == '' || email.trim() == '' || profesion.trim() == '' || email.trim() == '' || pais.trim() == '' || !recaptcha) {
+        if (!recaptcha || !nombre.trim() || !apellido.trim() || !email.trim() || !profesion.trim() || !empresa.trim() || !pais.trim()) {
             setError(true)
             return
         }
 
-        setError(false)
+        try {
+            await axios.post('http://localhost:3001/api/subscribers', form)
+            console.log('Suscriptor agregado con exito')
+            setForm({
+                nombre: '',
+                apellido: '',
+                email: '',
+                profesion: '',
+                empresa: '',
+                pais: ''
+            })
+            setError(false)
 
-        setForm({
-            nombre: '',
-            apellido: '',
-            email: '',
-            profesion: '',
-            empresa: '',
-            pais: '',
-        })
+        } catch (error) {
+            console.error('Error al agregar suscriptor:', error)
+        }
     }
 
     const validForm = nombre.trim() && apellido.trim() && email.trim() && profesion.trim() && empresa.trim() && pais.trim() && recaptcha
@@ -125,7 +124,7 @@ const Newsletter = () => {
 
                 <div className='mb-12'>
                     <ReCAPTCHA
-                        sitekey='6LdLgbcpAAAAABmoi1tE-38-DQvz1KvwJ1w6NDrw'
+                        sitekey={process.env.NEXT_PUBLIC_KEY_RECAPTCHA}
                         onChange={setRecaptcha}
                     />
                 </div>

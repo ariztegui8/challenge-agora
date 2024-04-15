@@ -34,9 +34,9 @@ const Navbar = () => {
 
     const handleClickMenuMobile = () => {
         if (clickMenu) {
-            setClickMenu(false);
+            setClickMenu(false)
         }
-      };
+    };
 
     return (
         <>
@@ -59,11 +59,13 @@ const Navbar = () => {
                     <p className='text-[#19417f] text-sm font-semibold cursor-pointer hover:text-[#AA2251]'>Change Lab</p>
                 </div>
                 <div className='flex items-center gap-4'>
-                    <div className='bg-[#c1285d] text-white text-sm cursor-pointer py-0.5 px-6 rounded-full hover:bg-[#aa2251]'>
-                        <Link href="https://www.paypal.com/donate/?hosted_button_id=EX8NMB3CKYPUG" target='_blank'>
+
+                    <Link href="https://www.paypal.com/donate/?hosted_button_id=EX8NMB3CKYPUG" target='_blank'>
+                        <div className='bg-[#c1285d] text-white text-sm cursor-pointer py-0.5 px-6 rounded-full hover:bg-[#aa2251]'>
                             <p>Donar</p>
-                        </Link>
-                    </div>
+                        </div>
+                    </Link>
+
                     <div className='flex gap-2'>
                         <div onClick={() => changeLanguage('ES')} className={`text-sm font-semibold cursor-pointer py-0.5 px-3 rounded-sm ${language === 'ES' ? 'bg-[#333333] text-white' : 'text-[#333333]'}`}>
                             <p>ES</p>
@@ -80,11 +82,12 @@ const Navbar = () => {
                     <Link href="/">
                         <img width={140} src={logo.src} alt="logo" />
                     </Link>
-                    <div className='bg-[#c1285d] text-white text-sm cursor-pointer py-0.5 px-6 rounded-full hover:bg-[#aa2251]'>
-                        <Link href="https://www.paypal.com/donate/?hosted_button_id=EX8NMB3CKYPUG" target='_blank'>
+                    <Link href="https://www.paypal.com/donate/?hosted_button_id=EX8NMB3CKYPUG" target='_blank'>
+                        <div className='bg-[#c1285d] text-white text-sm cursor-pointer py-0.5 px-6 rounded-full hover:bg-[#aa2251]'>
                             <p>Donar</p>
-                        </Link>
-                    </div>
+                        </div>
+                    </Link>
+
                 </div>
 
                 <div>
@@ -113,7 +116,7 @@ const Navbar = () => {
                 <p className='text-[#494c4f] py-2 cursor-pointer hover:text-white hover:bg-[#55595c] duration-200'>Impacto</p>
                 <p className='text-[#494c4f] py-2 cursor-pointer hover:text-white hover:bg-[#55595c] duration-200'>Súmate</p>
                 <Link onClick={handleClickMenuMobile} href="/blog">
-                <p className='text-[#494c4f] py-2 cursor-pointer hover:text-white hover:bg-[#55595c] duration-200'>Blog</p>
+                    <p className='text-[#494c4f] py-2 cursor-pointer hover:text-white hover:bg-[#55595c] duration-200'>Blog</p>
                 </Link>
                 <p className='text-[#494c4f] py-2 cursor-pointer hover:text-white hover:bg-[#55595c] duration-200'>Recursos</p>
                 <p className='text-[#494c4f] py-2 cursor-pointer hover:text-white hover:bg-[#55595c] duration-200'>Sedes</p>

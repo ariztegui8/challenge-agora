@@ -5,6 +5,7 @@ import planeacion from '@/assets/que_hacemos/planeacion.png'
 import empresario from '@/assets/que_hacemos/empresario-levantando-la-mano.png'
 
 const QueHacemos = () => {
+
     return (
         <div className='px-4 mb-16 md:px-10 lg:px-24 lg:mb-28'>
             <div className='flex flex-col gap-6 justify-between mb-14 md:flex-row'>
@@ -23,7 +24,7 @@ const QueHacemos = () => {
                 </div>
             </div>
 
-            <div className=' grid grid-cols-1 gap-10 lg:gap-4 lg:grid-cols-3'>
+            <div className=' grid grid-cols-1 gap-10 lg:gap-6 lg:grid-cols-3'>
                 <div className='group flex flex-col gap-4'>
                     <div className=' cursor-pointer overflow-hidden rounded-2xl flex '>
                         <img className='w-full h-52 sm:h-64 object-cover rounded-2xl hover:scale-110 duration-300' src={emprendedora.src} alt="" />

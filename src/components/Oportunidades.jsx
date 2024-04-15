@@ -15,9 +15,12 @@ const Oportunidades = () => {
                 </div>
             </div>
 
-            <div className='grid grid-cols-1 gap-10 lg:gap-4 lg:grid-cols-3'>
-                <div className='flex flex-col gap-4'>
+            <div className='grid grid-cols-1 gap-10 lg:gap-6 lg:grid-cols-3'>
+                <div className='relative flex flex-col gap-4'>
                     <div className='cursor-pointer rounded-2xl flex lg:overflow-hidden'>
+                        <div className='bg-[#333333] text-white text-xs cursor-pointer py-1.5 px-4 rounded-full absolute top-0 m-5'>
+                            <p>OPORTUNIDAD LABORAL</p>
+                        </div>
                         <img className='w-full h-52 sm:h-64 object-cover rounded-lg' src={diseñador.src} alt="" />
                     </div>
                     <div className='rounded-xl flex justify-between flex-col gap-4 flex-1'>
@@ -31,8 +34,11 @@ const Oportunidades = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-col gap-4'>
+                <div className='relative flex flex-col gap-4'>
                     <div className='cursor-pointer rounded-2xl flex lg:overflow-hidden'>
+                        <div className='bg-[#333333] text-white text-xs cursor-pointer py-1.5 px-4 rounded-full absolute top-0 m-5'>
+                            <p>OPORTUNIDAD LABORAL</p>
+                        </div>
                         <img className='w-full h-52 sm:h-64 object-cover rounded-lg' src={enginner.src} alt="" />
                     </div>
                     <div className='rounded-xl flex justify-between flex-col gap-4 flex-1'>
@@ -46,8 +52,11 @@ const Oportunidades = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-col gap-4'>
+                <div className='relative flex flex-col gap-4'>
                     <div className='cursor-pointer rounded-2xl flex lg:overflow-hidden'>
+                        <div className='bg-[#333333] text-white text-xs cursor-pointer py-1.5 px-4 rounded-full absolute top-0 m-5'>
+                            <p>OPORTUNIDAD LABORAL</p>
+                        </div>
                         <img className='w-full h-52 sm:h-64 object-cover rounded-lg' src={gerente.src} alt="" />
                     </div>
                     <div className='rounded-xl flex justify-between flex-col gap-4 flex-1'>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import axios from 'axios';
 
-const AddCard = ({ isOpen, onClose, setArticles }) => {
+const AddCard = ({ isOpen, onClose, setArticles, consumirApi }) => {
 
     const [form, setForm] = useState({
         title: '',
@@ -48,16 +48,7 @@ const AddCard = ({ isOpen, onClose, setArticles }) => {
             })
             console.log(response.data)
             if (response.data && response.data.articleId) {
-                const newArticle = {
-                    _id: response.data.articleId,
-                    title: form.title,
-                    description: form.description,
-                    category: form.category,
-                    author: form.author,
-                    video: form.video,
-                    image: response.data.imagePath || 'uploads/default.webp'
-                }
-                setArticles(prev => [newArticle, ...prev])
+                consumirApi()
             }
             setForm({
                 title: '',
@@ -104,6 +95,7 @@ const AddCard = ({ isOpen, onClose, setArticles }) => {
                                 name='title'
                                 value={title}
                                 onChange={handleChangeForm}
+                                required
                             />
                             <input
                                 type="text"
@@ -112,6 +104,7 @@ const AddCard = ({ isOpen, onClose, setArticles }) => {
                                 name='author'
                                 value={author}
                                 onChange={handleChangeForm}
+                                required
                             />
                             <textarea
                                 type="text"
@@ -121,6 +114,7 @@ const AddCard = ({ isOpen, onClose, setArticles }) => {
                                 value={description}
                                 onChange={handleChangeForm}
                                 rows={3}
+                                required
                             >
                             </textarea>
                             <select
@@ -128,6 +122,7 @@ const AddCard = ({ isOpen, onClose, setArticles }) => {
                                 name='category'
                                 value={category}
                                 onChange={handleChangeForm}
+                                required
                             >
                                 <option value='' disabled >Selecciona una categoría</option>
                                 <option value='BLOG'>Blog</option>
@@ -138,7 +133,7 @@ const AddCard = ({ isOpen, onClose, setArticles }) => {
                             </select>
                             <input
                                 type="text"
-                                placeholder="Link del video"
+                                placeholder="ID del video de YouTube ej: O7oxdswgr1Q"
                                 className="input text-[#333333] bg-[#fff] outline-none w-full border-b border-[#333333] py-2 placeholder:text-[#333333] text-sm"
                                 name='video'
                                 value={video}

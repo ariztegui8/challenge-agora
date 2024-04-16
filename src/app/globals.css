@@ -25,3 +25,7 @@ body{
 .custom-scrollbar::-webkit-scrollbar-track {
   background-color: #CBD5E0;
 }
+
+.slider .slick-slide:focus {
+  outline: none;
+}

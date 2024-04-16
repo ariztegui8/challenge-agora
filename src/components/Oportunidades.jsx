@@ -5,7 +5,7 @@ import gerente from '@/assets/oportunidad-laboral/Gerente-de-Alianzas4.webp'
 
 const Oportunidades = () => {
     return (
-        <div className='px-4 mb-16 md:px-10 lg:px-24 lg:mb-28'>
+        <div className='mb-16 lg:mb-28 max-w-[1200px] m-auto px-5 md:px-10'>
             <div className='mb-6 lg:mb-12'>
                 <div className='w-full flex flex-col items-start gap-2 lg:flex-row lg:gap-40 lg:items-center'>
                     <p className='text-[28px] font-semibold text-[#19417f] mb-3'>Oportunidades laborales</p>

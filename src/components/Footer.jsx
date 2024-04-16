@@ -19,7 +19,7 @@ const Footer = () => {
     }
 
     return (
-        <div className='px-4 mb-10 py-6 md:px-10 lg:px-24 md:mb-0'>
+        <div className='mb-10 py-6 md:mb-0 max-w-[1200px] m-auto px-5 md:px-10'>
             <div className='grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-10'>
                 <div className='flex flex-col gap-4 justify-between'>
                     <Link href="/">

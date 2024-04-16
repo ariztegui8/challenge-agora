@@ -43,6 +43,16 @@ const CardArticle = ({ article, openModalEdit, openModalDelete }) => {
         router.push(`/blog/${article._id}`)
     };
 
+    const handleButtonClickEdit = e => { 
+        e.stopPropagation();
+        openModalEdit(article)
+    }
+
+    const handleButtonClickDelete = e => { 
+        e.stopPropagation();
+        openModalDelete(article)
+    }
+
     return (
         <div className='relative flex flex-col gap-4 mb-4 lg:mb-8'>
             <div
@@ -56,11 +66,11 @@ const CardArticle = ({ article, openModalEdit, openModalDelete }) => {
                 <img className='w-full h-52 sm:h-64 object-cover rounded-lg' src={imageUrl} alt="" />
                 <div className='hidden lg:flex'>
                     {mostrarBtn && (
-                        <div className='absolute inset-0 flex justify-center items-center space-x-4 bg-black bg-opacity-[0.6]'>
-                            <button onClick={() => openModalEdit(article)} className='text-white bg-[linear-gradient(99.27deg,_#E2663A_-2.26%,_#EB9B1A_98.84%)] hover:bg-[linear-gradient(99.27deg,_#e07750_-2.26%,_#eba32f_98.84%)] font-bold py-2 px-4 rounded'>
+                        <div onClick={handlePageId} className='absolute inset-0 flex justify-center items-center space-x-4 bg-black bg-opacity-[0.6]'>
+                            <button onClick={handleButtonClickEdit} className='text-white bg-[linear-gradient(99.27deg,_#E2663A_-2.26%,_#EB9B1A_98.84%)] hover:bg-[linear-gradient(99.27deg,_#e07750_-2.26%,_#eba32f_98.84%)] font-bold py-2 px-4 rounded'>
                                 Editar
                             </button>
-                            <button onClick={() => openModalDelete(article)} className='text-white bg-[#333333] hover:bg-[#4d4c4c] font-bold py-2 px-4 rounded'>
+                            <button onClick={handleButtonClickDelete} className='text-white bg-[#333333] hover:bg-[#4d4c4c] font-bold py-2 px-4 rounded'>
                                 Eliminar
                             </button>
                         </div>

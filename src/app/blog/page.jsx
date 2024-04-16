@@ -1,7 +1,7 @@
 'use client'
 import axios from "axios";
 import { useEffect, useState, useRef } from "react";
-import blogImg from '@/assets/blog/blog-img.webp'
+import finanzas from '@/assets/blog/finanzas.webp'
 import CardArticle from "./CardArticle";
 import AddCard from "./AddCard";
 import { FaPlus } from "react-icons/fa6";
@@ -50,7 +50,7 @@ const Blog = () => {
 
     const consumirApi = async (page = 1) => {
         try {
-            const { data } = await axios.get(`http://localhost:3001/api/articles?page=${page}&limit=10`)
+            const { data } = await axios.get(`http://localhost:3001/api/articles?page=${page}&limit=12`)
             setArticles(data.articles || [])
             setTotalPages(data.totalPages)
             setPage(data.page)
@@ -95,18 +95,18 @@ const Blog = () => {
 
     return (
         <div ref={scroll} className='mt-12 lg:mt-28'>
-            <div className='px-4 mb-12 lg:mb-12 flex flex-col gap-6 md:flex-row xl:px-24'>
+            <div className='mb-12 lg:mb-12 flex flex-col gap-6 md:flex-row  max-w-[1200px] m-auto px-5 md:px-10'>
                 <div className="bg-[#19417f] rounded-2xl flex flex-col justify-center p-6 w-full md:p-8 lg:p-20 md:w-[55%]">
                     <p className='text-sm font-semibold text-white mb-4 md:text-xs'>NUESTRO BLOG</p>
                     <p className='text-white text-[25px] font-semibold md:text-[35px]'>Conoce nuestros últimos artículos y noticias</p>
                 </div>
 
                 <div className=' w-full cursor-pointer rounded-2xl flex flex-col lg:overflow-hidden md:w-[45%]'>
-                    <img className='w-full h-52 sm:h-64 object-cover rounded-lg md:flex-1' src={blogImg.src} alt="" />
+                    <img className='w-full h-52 sm:h-64 object-cover rounded-lg md:flex-1' src={finanzas.src} alt="" />
                 </div>
             </div>
 
-            <div className="px-4 md:px-36 mb-12 lg:px-60">
+            <div className=" mb-12 max-w-[1000px] m-auto px-5 md:px-10">
                 <div className="rounded-xl bg-[#333333] flex gap-5 justify-center p-5 flex-wrap">
                     <p className="text-white text-xs cursor-pointer">Blog</p>
                     <p className="text-white text-xs cursor-pointer">Convocatoria abierta</p>
@@ -119,7 +119,7 @@ const Blog = () => {
                 </div>
             </div>
 
-            <div ref={scroll} className="flex flex-col gap-6 justify-evenly mb-10 px-4 xl:px-24 lg:flex-row">
+            <div ref={scroll} className="flex flex-col gap-6 justify-evenly mb-10 lg:flex-row  max-w-[1200px] m-auto px-5 md:px-10">
                 <SearchCard
                     setArticles={setArticles}
                 />
@@ -134,6 +134,7 @@ const Blog = () => {
                     isOpen={isModalOpen}
                     onClose={closeModal}
                     setArticles={setArticles}
+                    consumirApi={consumirApi}
                 />
                 <EditCard
                     isOpen={isModalOpenEdit}
@@ -150,7 +151,7 @@ const Blog = () => {
                 />
             </div>
 
-            <div className="px-4 mb-16 md:px-10 lg:px-24 lg:mb-28">
+            <div className="mb-16 lg:mb-28 max-w-[1200px] m-auto px-5 md:px-10">
                 <div className='grid grid-cols-1 gap-10 mb-4 lg:gap-6 lg:grid-cols-3'>
                     {articles.length > 0 ?
                         articles.map(article => (

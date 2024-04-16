@@ -23,13 +23,15 @@ const Financiadores = () => {
 
     const settings = {
         infinite: true,
-        speed: 3000,
+        speed: 2500,
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2500,
         cssEase: "linear",
         pauseOnHover: false,
+        swipeToSlide: true,
+        draggable: true,
         responsive: [
             {
                 breakpoint: 1024,
@@ -134,7 +136,7 @@ const Financiadores = () => {
     ];
 
     return (
-        <div className='px-4 mb-16 md:px-10 lg:px-24 lg:mb-28'>
+        <div className='mb-16 lg:mb-28 max-w-[1200px] m-auto px-5 md:px-10'>
             <div className='mb-20'>
                 <div className='w-full'>
                     <p className='text-[28px] font-semibold text-[#19417f] mb-3'>Nuestros Financiadores</p>

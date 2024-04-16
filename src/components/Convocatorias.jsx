@@ -5,7 +5,7 @@ import francis from '@/assets/convocatorias/Francis-Castillo-1536x1203.webp'
 
 const Convocatorias = () => {
     return (
-        <div className='px-4 mb-16 md:px-10 lg:px-24 lg:mb-28'>
+        <div className='mb-16 lg:mb-28 max-w-[1200px] m-auto px-5 md:px-10'>
             <div className='mb-12'>
                 <div className='w-full '>
                     <p className='text-[28px] font-semibold text-[#19417f] mb-3'>Convocatorias abiertas y novedades</p>

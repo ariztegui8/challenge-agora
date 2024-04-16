@@ -40,7 +40,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className='hidden fixed top-0 z-10 w-full bg-white justify-center items-center gap-20 py-2.5 shadow-md lg:flex'>
+            <div className='hidden fixed top-0 z-10 w-full bg-white justify-center items-center gap-4 xl:gap-20 py-2.5 shadow-md lg:flex px-5 md:px-10'>
                 <div>
                     <Link href="/">
                         <img width={120} src={logo.src} alt="logo" />

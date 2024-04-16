@@ -129,7 +129,7 @@ const EditCard = ({ isOpen, onClose, setArticles, articleToEdit }) => {
                             </select>
                             <input
                                 type="text"
-                                placeholder="Link del video"
+                                placeholder="ID del video de YouTube ej: O7oxdswgr1Q"
                                 className="input text-[#333333] bg-[#fff] outline-none w-full border-b border-[#333333] py-2 placeholder:text-[#333333] text-sm"
                                 name='video'
                                 value={form.video}

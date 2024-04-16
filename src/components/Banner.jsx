@@ -48,7 +48,7 @@ const Banner = () => {
     return (
         <div className='lg:mt-14 mb-10'>
             <div className='hidden md:flex'>
-                <img width="100%" src={bannerDesktop.src} alt="Banner" />
+                <img width="100%" className='xl:h-[520px]' src={bannerDesktop.src} alt="Banner" />
             </div>
             <div className='block md:hidden'>
                 <Slider {...settings}>

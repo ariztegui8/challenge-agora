@@ -109,7 +109,7 @@ const Aliados = () => {
     ];
 
     return (
-        <div className='px-4 mb-16 md:px-10 lg:px-24 lg:mb-28'>
+        <div className='mb-16 lg:mb-28 max-w-[1200px] m-auto px-5 md:px-10'>
             <div className='flex flex-col gap-6 justify-between mb-8 md:flex-row lg:mb-20'>
                 <div className='w-full max-w-[28rem]'>
                     <p className='text-[28px] font-semibold text-[#19417f] mb-3'>Nuestros aliados</p>
@@ -117,12 +117,14 @@ const Aliados = () => {
                     <p className='text-[#333333]'>Contáctate para conocer más sobre cómo colaborar con Agora Partnerships.</p>
                 </div>
                 <div className='w-full'>
-                    <div className='flex gap-2 justify-end items-start cursor-pointer'>
+                    <div className='group flex gap-2 justify-end items-start cursor-pointer'>
                         <p className='text-sm font-semibold text-[#19417f]'>Súmate como aliado</p>
-                        <BsArrowUpRightCircle
-                            color='#19417f'
-                            size={20}
-                        />
+                        <div className='transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1'>
+                            <BsArrowUpRightCircle
+                                color='#19417f'
+                                size={20}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -37,7 +37,7 @@ const PageId = () => {
     };
 
     // const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL
-    const imageUrl = article.image ? article.image : process.env.NEXT_PUBLIC_CLOU_DEFAULT_IMAGE;
+    const imageUrl = article?.image ? article.image : process.env.NEXT_PUBLIC_CLOU_DEFAULT_IMAGE;
     const editDescription = article ? changeEditDescription(article.description, 150) : '';
 
 

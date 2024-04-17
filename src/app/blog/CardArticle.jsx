@@ -23,7 +23,7 @@ const CardArticle = ({ article, openModalEdit, openModalDelete }) => {
     }
 
     // const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL
-    const imageUrl = article.image ? article.image : process.env.NEXT_PUBLIC_CLOU_DEFAULT_IMAGE;
+    const imageUrl = article?.image ? article.image : process.env.NEXT_PUBLIC_CLOU_DEFAULT_IMAGE;
 
     const handleEdit = () => {
         openModalEdit(article)

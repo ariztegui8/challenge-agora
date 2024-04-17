@@ -36,8 +36,8 @@ const PageId = () => {
         }
     };
 
-    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL
-    const imageUrl = article && article.image ? `${baseUrl}/${article.image.replace(/\\/g, '/')}` : `${baseUrl}/uploads/default.webp`;
+    // const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL
+    const imageUrl = article && article.image ? article.image : 'https://res.cloudinary.com/dq2kjqcxd/image/upload/v1713292619/default_y5eoxb.svg';
     const editDescription = article ? changeEditDescription(article.description, 150) : '';
 
 

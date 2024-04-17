@@ -56,5 +56,6 @@ Esta estructura facilita la escalabilidad y mantenimiento del proyecto.
 - **Mejoras en Carrouseles**: Optimizar los carrouseles para que sean más fluidos y responsivos.
 - **Adaptabilidad Móvil**: Mejorar la experiencia en dispositivos móviles revisando elementos como efectos de hover que no son prácticos en estas interfaces.
 - **Navbar Fijo**: Implementar un menú de navegación fijo para mejorar la accesibilidad y la navegación en la aplicación.
-- **Botón de Regreso en Blog**: Agregar botones para volver atrás en las tarjetas del blog, mejorando la navegación y experiencia de usuario.
+- **Botón de Regreso en Página de Detalle**: Agregar botones para volver atrás y regresar al blog, mejorando la navegación y experiencia de usuario.
+**Uso de Bibliotecas UI como Material-UI o NextUI**: Implementar una biblioteca de componentes UI para estandarizar y reutilizar elementos visuales en toda la aplicación, lo que también podría ayudar a mejorar la coherencia y la velocidad de desarrollo.
 

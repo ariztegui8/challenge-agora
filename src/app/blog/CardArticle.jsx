@@ -63,7 +63,7 @@ const CardArticle = ({ article, openModalEdit, openModalDelete }) => {
                 <div className='bg-[#333333] text-white text-xs  py-1.5 px-4 rounded-full absolute top-0 m-5'>
                     <p>{article.category}</p>
                 </div>
-                <img className='w-full h-52 sm:h-64 object-cover rounded-lg' src={imageUrl} alt="" />
+                <img onClick={handlePageId} className='w-full h-52 sm:h-64 object-cover rounded-lg' src={imageUrl} alt="" />
                 <div className='hidden lg:flex'>
                     {mostrarBtn && (
                         <div onClick={handlePageId} className='absolute inset-0 flex justify-center items-center space-x-4 bg-black bg-opacity-[0.6]'>

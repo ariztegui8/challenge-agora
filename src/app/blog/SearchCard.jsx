@@ -8,7 +8,7 @@ const SearchCard = ({ setArticles }) => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get(`http://localhost:3001/api/articles?search=${search}&sort=${order}`)
+            const response = await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/articles?search=${search}&sort=${order}`)
             setArticles(response.data.articles || [])
         } catch (error) {
             console.error('Error buscando articles', error)

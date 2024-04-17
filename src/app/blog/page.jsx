@@ -50,7 +50,7 @@ const Blog = () => {
 
     const consumirApi = async (page = 1) => {
         try {
-            const { data } = await axios.get(`http://localhost:3001/api/articles?page=${page}&limit=12`)
+            const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/articles?page=${page}&limit=12`)
             setArticles(data.articles || [])
             setTotalPages(data.totalPages)
             setPage(data.page)
@@ -83,7 +83,7 @@ const Blog = () => {
 
     const handleDeleteArticle = async (id) => {
         try {
-            await axios.delete(`http://localhost:3001/api/articles/${id}`)
+            await axios.delete(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/articles/${id}`)
             setArticles(prevArticles => prevArticles.filter(article => article._id !== id))
             closeModalDelete()
         } catch (error) {

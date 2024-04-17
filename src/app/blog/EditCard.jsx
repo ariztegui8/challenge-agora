@@ -53,7 +53,7 @@ const EditCard = ({ isOpen, onClose, setArticles, articleToEdit }) => {
         try {
             const response = await axios({
                 method: 'put',
-                url: `http://localhost:3001/api/articles/${articleToEdit._id}`,
+                url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/articles/${articleToEdit._id}`,
                 data: formData,
                 headers: { 'Content-Type': 'multipart/form-data' },
             })

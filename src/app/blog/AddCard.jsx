@@ -41,7 +41,7 @@ const AddCard = ({ isOpen, onClose, setArticles, consumirApi }) => {
         }
 
         try {
-            const response = await axios.post('http://localhost:3001/api/articles', formData, {
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/articles`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 }

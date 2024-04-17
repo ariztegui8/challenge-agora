@@ -36,7 +36,7 @@ const Newsletter = () => {
         }
 
         try {
-            await axios.post('http://localhost:3001/api/subscribers', form)
+            await axios.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/subscribers`, form)
             console.log('Suscriptor agregado con exito')
             setForm({
                 nombre: '',

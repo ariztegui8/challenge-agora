@@ -22,8 +22,8 @@ const CardArticle = ({ article, openModalEdit, openModalDelete }) => {
         return null
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL
-    const imageUrl = article.image ? `${baseUrl}/${article.image.replace(/\\/g, '/')}` : `${baseUrl}/uploads/default.webp`
+    // const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL
+    const imageUrl = article.image ? article.image : 'https://res.cloudinary.com/dq2kjqcxd/image/upload/v1713292619/default_y5eoxb.svg';
 
     const handleEdit = () => {
         openModalEdit(article)

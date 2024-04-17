@@ -28,7 +28,7 @@ const PageId = () => {
 
     const fetchArticle = async (id) => {
         try {
-            const response = await axios.get(`http://localhost:3001/api/articles/${id}`)
+            const response = await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/articles/${id}`)
             console.log('API response:', response.data);
             setArticle(response.data)
         } catch (error) {

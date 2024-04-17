@@ -61,7 +61,7 @@ const Newsletter = () => {
 
     return (
         <div className='bg-[#333333] rounded-2xl'>
-            <div className='py-10 mb-16  md:py-20 lg:mb-28  max-w-[1200px] m-auto px-5 md:px-10' id='newsletter'>
+            <div className='py-10 mb-16  md:py-20 lg:mb-28  max-w-[1200px] m-auto px-5 md:px-10'>
                 <div className='mb-10'>
                     <div className='w-full'>
                         <p className='text-[32px] font-semibold text-white lg:max-w-[20rem]'>Suscríbete a nuestro newsletter</p>

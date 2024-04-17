@@ -50,7 +50,7 @@ const Footer = () => {
                         </Link>
                     </div>
                     <div className='flex gap-2 cursor-pointer'>
-                        <Link href='#newsletter'>
+                        <Link href='#'>
                             <p className='text-sm font-semibold text-[#19417f]'>Suscribirme al newsletter</p>
                         </Link>
                         <BsArrowUpRightCircle

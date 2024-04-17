@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Documentación del Proyecto Agora
 
-## Getting Started
+## Descripción del Proyecto
 
-First, run the development server:
+Este proyecto es un clon del sitio web Agora2023, implementado con tres páginas principales:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Página Principal**: Replica el diseño original del sitio Agora, siguiendo la línea de colores, tipografías, iconos e interacciones establecidas.
+- **Blog**: Consume una API desarrollada en Node.js y alojada en MongoDB. Permite crear, leer, actualizar y eliminar artículos. Incluye funcionalidades como búsqueda, paginación y ordenamiento ascendente/descendente de artículos.
+- **Página de Detalle**: Muestra información detallada de cada artículo seleccionado desde el Blog, permitiendo a los usuarios leer contenido completo de cada entrada.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Además, la página principal integra un newsletter que captura datos de los usuarios y los almacena en MongoDB.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Infraestructura y URLs de Acceso
 
-## Learn More
+El proyecto está desplegado en dos plataformas diferentes para separar el front-end del back-end.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Backend
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Alojado en**: Railway
+- **URL Base**: https://backagora.up.railway.app/
+- **Endpoint de Artículos**: https://backagora.up.railway.app/api/articles
+- **Endpoint de Suscriptores**: https://backagora.up.railway.app/api/subscribers
 
-## Deploy on Vercel
+### Frontend
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Alojado en**: Vercel
+- **URL del Proyecto**: https://challenge-agora.vercel.app/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Esta estructura facilita la escalabilidad y mantenimiento del proyecto.
+
+
+## Tecnologías Utilizadas
+
+- **Next.js**: Elegido por su sistema de enrutamiento avanzado que facilita la implementación de rutas dinámicas y optimizadas.
+- **Axios**: Realizar solicitudes a la API.
+- **React-Countup** y **React-Intersection-Observer**: Utilizados para animar números que cuentan hasta un cierto valor cuando el elemento es visible en el viewport.
+- **React-Google-Recaptcha**: Implementado para agregar una seguridad en los formularios y verificar que el usuario no sea un bot.
+- **React-Icons**: Usado para incluir íconos en la aplicación.
+- **React-Slick** y **Slick-Carousel**: Bibliotecas para crear carruseles de imágenes de forma dinámica y responsiva.
+- **React-Spinners**: Animaciones de carga para mejorar la experiencia del usuario durante la espera de la carga de datos.
+- **Tailwind CSS**: Framework de CSS para estilizar la aplicación de manera rápida y eficiente.
+
+
+## Buenas Prácticas Implementadas
+
+- **Componentización**: División de la interfaz en componentes reutilizables para mejorar la mantenibilidad y escalabilidad del código.
+- **Responsividad**: Diseño adaptable para garantizar una buena experiencia de usuario en dispositivos móviles y diferentes tamaños de pantalla.
+- **Estructura de Archivos**: Organización lógica de archivos y carpetas para facilitar la navegación y comprensión del código fuente.
+- **Uso de Hooks**: Aplicación de Hooks de React para gestionar el estado y el ciclo de vida de los componentes de manera efectiva.
+
+
+## Sugerencias de Mejora
+
+- **Mejoras en Carrouseles**: Optimizar los carrouseles para que sean más fluidos y responsivos.
+- **Adaptabilidad Móvil**: Mejorar la experiencia en dispositivos móviles revisando elementos como efectos de hover que no son prácticos en estas interfaces.
+- **Navbar Fijo**: Implementar un menú de navegación fijo para mejorar la accesibilidad y la navegación en la aplicación.
+- **Botón de Regreso en Blog**: Agregar botones para volver atrás en las tarjetas del blog, mejorando la navegación y experiencia de usuario.
+

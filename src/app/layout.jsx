@@ -3,7 +3,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Challenge Agora",
+  title: "Clon sitio Agora",
   description: "",
 };
 

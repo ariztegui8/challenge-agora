@@ -26,7 +26,7 @@ El proyecto está desplegado en dos plataformas diferentes para separar el front
 ### Frontend
 
 - **Alojado en**: Vercel
-- **URL del Proyecto**: https://challenge-agora.vercel.app/
+- **URL del Proyecto**: https://clon-agora.vercel.app/
 
 Esta estructura facilita la escalabilidad y mantenimiento del proyecto.
 
